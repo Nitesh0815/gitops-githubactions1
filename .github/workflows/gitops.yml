@@ -70,7 +70,7 @@ jobs:
           persist-credentials: false
       - name: setup git config
         run: |
-          git config --global user.email "niteshpunia15@gmail.com"
+          git config --global user.email "nk9910922101@gmail.com"
           git config --global user.name "Nitesh0815"
           git remote set-url origin https://x-access-token:${{ secrets.G_TOKEN }}@github.com/Nitesh0815/gitops-githubactions2.git
           echo ${{ github.sha }}
