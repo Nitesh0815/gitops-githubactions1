@@ -74,7 +74,7 @@ jobs:
           git config --global user.name "Nitesh0815"
           git remote set-url origin https://x-access-token:${{ secrets.G_TOKEN }}@github.com/Nitesh0815/gitops-githubactions2.git
           echo ${{ github.sha }}
-          sed -i "s#nitesh1508.*/gitops01:${{ github.sha }}#g" deployment.yaml
+          sed -i "s|nitesh1508/gitops01:.*|nitesh1508/gitops01:${{ github.sha }}|g" deployment.yaml
           git add -A
           git commit -am "Update image for - ${{ github.sha }}"
       - run: echo ${{ github }}
